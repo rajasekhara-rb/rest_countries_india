@@ -6,9 +6,9 @@ xhr.onreadystatechange = function () {
         // console.log(data);
 
         for (let i = 0; i < data.length; i++) {
-            console.log("1st for");
+        // console.log("1st for");
             if (data[i].name.common == "India") {
-                console.log("1st if");
+             // console.log("1st if");
                 console.log(`
                     Country name: ${data[i].name.common}
                     Currency name: ${data[i].currencies.INR.name}
