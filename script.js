@@ -6,15 +6,27 @@ xhr.onreadystatechange = function () {
         // console.log(data);
 
         for (let i = 0; i < data.length; i++) {
-        // console.log("1st for");
+            // console.log("1st for");
             if (data[i].name.common == "India") {
-             // console.log("1st if");
+                let obj = data[i].languages;
+                var lang = "";
+                for (key in obj) {
+                    lang = key;
+                    console.log(obj[key]);
+                }
+                var cur = "";
+                let obj2 = data[i].currencies;
+                for (key in obj2) {
+                    cur = key;
+                }
+
+                // console.log("1st if");
                 console.log(`
                     Country name: ${data[i].name.common}
-                    Currency name: ${data[i].currencies.INR.name}
+                    Currency name: ${data[i].currencies[cur].name}
                     Capital: ${data[i].capital}
                     Region: ${data[i].region}
-                    Language: ${data[i].languages}
+                    Language: ${data[i].languages[lang]}
                     Population: ${data[i].population}
                     Country Flag: ${data[i].flags.png}
                     `);
