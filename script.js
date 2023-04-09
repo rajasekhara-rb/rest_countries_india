@@ -11,8 +11,8 @@ xhr.onreadystatechange = function () {
                 let obj = data[i].languages;
                 var lang = "";
                 for (key in obj) {
-                    lang = key;
-                    console.log(obj[key]);
+                    lang += obj[key]+" ";
+                    // console.log(obj[key]);
                 }
                 var cur = "";
                 let obj2 = data[i].currencies;
@@ -26,7 +26,7 @@ xhr.onreadystatechange = function () {
                     Currency name: ${data[i].currencies[cur].name}
                     Capital: ${data[i].capital}
                     Region: ${data[i].region}
-                    Language: ${data[i].languages[lang]}
+                    Language: ${lang}
                     Population: ${data[i].population}
                     Country Flag: ${data[i].flags.png}
                     `);
